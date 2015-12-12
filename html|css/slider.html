@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Registration</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="jquery.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+        <style>
+            body {
+                position: relative; 
+            }
+             #section0 {padding-top:50px;height:1430px;color: #fff; background-color: black;}
+            #section1 {padding-top:50px;height:1350px;color: #fff; background-color: black;}
+            #section2 {padding-top:50px;height:1050px;color: #fff; background-color: #673ab7;}
+            #section3 {padding-top:50px;height:700px;color: #fff; background-color: #ff9800;}
+            #section41 {padding-top:50px;height:700px;color: #fff; background-color: #00bcd4;}
+          
+            
+             *:focus{outline:none;}
+                    body {font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;}
+                    #myForm label {font-family:Georgia, Times, "Times New Roman", serif;}
+                    .required_notification {font-size: 11px;}
+
+                    #myForm ul {
+                        width:750px;
+                        list-style-type:none;
+                        list-style-position:outside;
+                        margin:0px;
+                        padding:0px;
+                    }
+                    #myForm li{
+                        padding:12px;
+                        border-bottom:1px solid #eee;
+                        position:relative;
+                    }
+
+                    #myForm li:first-child, #myForm li:last-child {
+                        border-bottom:1px solid #777;
+                    }
+
+                    #myForm h1 {
+                        margin:430px;
+                        font-family:Georgia, Times, "Times New Roman", serif;
+                        color:#d45210;
+                        display: inline;
+                    }
+                    .required_notification {
+                        color:#d45252;
+                        margin:-20px 0 0 0;
+                        display:inline;
+                        float:right;
+                    }
+
+                    #myForm label {
+                        color: green;
+                        width:150px;
+                        margin-top: 3px;
+                        display:inline-block;
+                        padding:3px;
+                    }
+                    #myForm input {
+                        height:25px;
+                        width:220px;
+                        padding:5px 8px;
+                    }
+                    #myForm button {margin-left:500px;}
+
+                    #myForm input, #myForm textarea {
+                        border:1px solid green;
+                       // box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+                        border-radius:2px;
+                        background: black;
+                    }
+                    #myForm input:focus, #myForm textarea:focus {
+                        background: black;
+                        border:1px solid #555;
+                        box-shadow: 0 0 3px #aaa;
+                    }
+                    /* Button Style */
+                    button.submit {
+                        background-color: #68b12f;
+                        background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
+                        background: -webkit-linear-gradient(top, #68b12f, #50911e);
+                        background: -moz-linear-gradient(top, #68b12f, #50911e);
+                        background: -ms-linear-gradient(top, #68b12f, #50911e);
+                        background: -o-linear-gradient(top, #68b12f, #50911e);
+                        background: linear-gradient(top, #68b12f, #50911e);
+                        border: 1px solid #509111;
+                        border-bottom: 1px solid #5b992b;
+                        border-radius: 3px;
+                        -webkit-border-radius: 3px;
+                        -moz-border-radius: 3px;
+                        -ms-border-radius: 3px;
+                        -o-border-radius: 3px;
+                        box-shadow: inset 0 1px 0 0 #9fd574;
+                        -webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
+                        -moz-box-shadow: 0 1px 0 0 #9fd574 inset;
+                        -ms-box-shadow: 0 1px 0 0 #9fd574 inset;
+                        -o-box-shadow: 0 1px 0 0 #9fd574 inset;
+                        color: white;
+                        font-weight: bold;
+                        padding: 6px 20px;
+
+                        text-align: center;
+                        text-shadow: 0 -1px 0 #396715;
+                    }
+                    button.submit:hover {
+                        opacity:.85;
+                        cursor: pointer;
+                    }
+                    button.submit:active {
+                        border: 1px solid #20911e;
+                        box-shadow: 0 0 10px 5px #356b0b inset;
+                        -webkit-box-shadow:0 0 10px 5px #356b0b inset ;
+                        -moz-box-shadow: 0 0 10px 5px #356b0b inset;
+                        -ms-box-shadow: 0 0 10px 5px #356b0b inset;
+                        -o-box-shadow: 0 0 10px 5px #356b0b inset;
+                    }
+                    #cl{
+                        text-decoration-color: black;
+                    }
+
+                    #myForm input:required{
+                        background: lightseagreen url(redstar.png) no-repeat 95% center;
+                         box-shadow: 0 0 5px #5cd053;
+                         background-color: black;
+                        //border-color: #28921f;
+                    }
+
+                    #myForm input:focus:invalid, #myForm textarea:focus:invalid { 
+                        background: lightseagreen url(red.png) no-repeat 95% center;
+                        box-shadow: 0 0 5px yellow;
+                        border-color: #b03535;
+                    }
+
+                    #myForm input:required:valid, #myForm textarea:required:valid { 
+                        background: border-box url(gtick.png) no-repeat 95% center;
+                        box-shadow: 0 0 5px #5cd053;
+                        border-color: #28921f;
+                    }
+                   
+                    *:focus{outline:none;}
+body {font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;}
+#subject label {font-family:Georgia, Times, "Times New Roman", serif;}
+.required_notification {font-size: 11px;}
+
+#subject ul {
+    width:750px;
+    list-style-type:none;
+    list-style-position:outside;
+    margin:0px;
+    padding:0px;
+}
+#subject li{
+    padding:12px;
+    border-bottom:1px solid #eee;
+    position:relative;
+}
+
+#subject li:first-child, #subject li:last-child {
+    border-bottom:1px solid #777;
+}
+
+#subject h1 {
+    margin:430px;
+	font-family:Georgia, Times, "Times New Roman", serif;
+    color:#d45210;
+	display: inline;
+}
+.required_notification {
+    color:#d45252;
+    margin:-20px 0 0 0;
+    display:inline;
+    float:right;
+}
+
+#subject label {
+    width:150px;
+    margin-top: 3px;
+    display:inline-block;
+    padding:3px;
+}
+#subject input,#subject select {
+    height:30px;
+    width:220px;
+    padding:5px 8px;
+}
+#subject button {margin-left:500px;}
+
+#subject input, #subject textarea,#subject select {
+    border:1px solid green;
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+    border-radius:2px;
+}
+#subject input:focus, #subject textarea:focus {
+    background: black;
+    border:1px solid #555;
+    box-shadow: 0 0 3px #aaa;
+}
+/* Button Style */
+button.submit {
+    background-color: #68b12f;
+    background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
+    background: -webkit-linear-gradient(top, #68b12f, #50911e);
+    background: -moz-linear-gradient(top, #68b12f, #50911e);
+    background: -ms-linear-gradient(top, #68b12f, #50911e);
+    background: -o-linear-gradient(top, #68b12f, #50911e);
+    background: linear-gradient(top, #68b12f, #50911e);
+    border: 1px solid #509111;
+    border-bottom: 1px solid #5b992b;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    box-shadow: inset 0 1px 0 0 #9fd574;
+    -webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
+    -moz-box-shadow: 0 1px 0 0 #9fd574 inset;
+    -ms-box-shadow: 0 1px 0 0 #9fd574 inset;
+    -o-box-shadow: 0 1px 0 0 #9fd574 inset;
+    color: white;
+    font-weight: bold;
+    padding: 6px 20px;
+    text-align: center;
+    text-shadow: 0 -1px 0 #396715;
+}
+button.submit:hover {
+    opacity:.85;
+    cursor: pointer;
+}
+button.submit:active {
+    border: 1px solid #20911e;
+    box-shadow: 0 0 10px 5px #356b0b inset;
+    -webkit-box-shadow:0 0 10px 5px #356b0b inset ;
+    -moz-box-shadow: 0 0 10px 5px #356b0b inset;
+    -ms-box-shadow: 0 0 10px 5px #356b0b inset;
+    -o-box-shadow: 0 0 10px 5px #356b0b inset;
+}
+
+#subject input:required{
+    background: #fff url(redstar.png) no-repeat 98% center;
+   // box-shadow: 0 0 5px #5cd053;
+    //border-color: #28921f;
+}
+
+#subject input:focus:invalid, #subject textarea:focus:invalid { 
+    background: black url(red.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #d45252;
+    border-color: #b03535;
+}
+
+#subject input:required:valid, #subject textarea:required:valid { 
+    background: black url(gtick.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+}
+#cl{
+    background: green;
+   
+    text-decoration-color: black;
+}
+                    
+        </style>
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="#">UIET CSJM University</a>
+                </div>
+                <div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#section0">Fee Submit</a></li>
+                            <li><a href="#section1"> Student Registration</a></li>
+                            <li><a href="#section2">Course Enroll</a></li>
+                            <li><a href="#section3"> Search an ID...</a></li>
+
+                            <li><a href="#section41">Manage (Update/Delete)</a></li>
+                           
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>    
+        <div id="section0" class="container-fluid">
+            <h2> Welcome to Fee Submission...</h2>
+            <body>
+                <ol>
+                    <form id="myForm" action="fee.php" method="post">
+                        <h1> Fee Submission Portal<br></h1>
+                        <br>
+
+                        <span class="required_notification">* Denotes Required Field</span>
+
+
+
+                        <li><label id="r">Name of Institute:</label><input type="text" name="institute" placeholder="dddddd" required/>
+                        </li>
+
+                        <li><label id="r">Account No:</label><input type="text" name="accountno" placeholder="16 digit number" required/>
+                        </li>
+                        <li><label id="r">Name of Student:</label><input type="text" name="sname" placeholder="Name" required/>
+                        </li>
+                        <li><label id="r">Student Id:</label><input type="text" name="roll" placeholder="12345" required pattern="[0-9]{5}"/>
+
+                        <li><label id="r">Father's Name:</label><input type="text" name="fname"  required/></li>
+
+
+                        <li><label id="r">Semester:</label><input type="text" name="semester" required pattern="[0-9]{1}"/>
+                        <tr>
+                        <label id="r">Year: </label>
+                        <td><input type="text" name="year"  required="" /></td>
+                        </tr>
+                        <tr>
+                        <label id="r">Branch:</label>
+                        <td><input type="text" name="branch" required="" /></td>
+                        </tr>
+                        <br>
+                        <br>
+
+                        <h1>Fee Details</h1>
+
+                        <ol>
+
+                            <li><label id="r">Tution Fee:</label><input type="text" name="tutionf" placeholder=" Enter Amount" required/>
+
+
+                            <li><label id="r">Exam Fee:</label><input type="text" name="examf" placeholder="Enter Amount" required/>
+
+                            <li><label id="r">Enrolment Fee:</label><input type="text" name="enrollf" placeholder="Enter Amount" required/>
+
+                            <li><label id="r">Processing Fee:</label><input type="text" name="processf" placeholder="Enter Amount" required/>
+
+                            <li><label id="r">Degree Fee:</label><input type="text" name="degreef" placeholder="Enter Amount" required/>
+
+
+
+                            <li><label id="r">Insurance Fee:</label><input type="text" name="ensuref" placeholder="Enter Amount" required/>
+
+
+                            <li><label id="r">Late Fee:</label><input type="text" name="latef" placeholder="Enter Amount" required/>
+
+
+                            <li><label id="r">Miscellaneous Fee:</label><input type="text" name="miscf" placeholder="Enter Amount" required/>
+							<li><label id="r">Cash/DD/Check no:</label><input type="text" name="dd" placeholder="Enter Amount" required/>
+							<li><label id="r">Bank Name:</label><input type="text" name="bnk" placeholder="Enter Amount" required/>
+
+
+                                
+                            <li><label id="r">Total Fee:</label><input type="text" name="totalf" placeholder="Enter Amount" required/>
+                                
+
+                             <li><label id="r">Fee in Words:</label><input type="text" name="wf" placeholder="wite Amount" required/>
+                           
+                            
+                             
+                           
+                            
+                            
+                        </ol>
+
+                        <br>
+
+                        <button class="submit" type="submit">Submit Form</button>
+
+                    </form></div>
+
+        <div id="section1" class="container-fluid">
+            <h2> Welcome to Registration Portal... </h2> <img id="pos" src="workshops.png" height="100" width="120" />
+
+            <body>
+                
+                <ol>
+
+                    <form id="myForm" action="insert.php" method="post">
+
+                        <h1>Student Information<br></h1>
+                        <br>
+                        <span class="required_notification">* Denotes Required Field</span>
+
+
+                        <li><label id="r">Id:</label><input type="text" name="id" placeholder="dddddd" required pattern="[0-9]{5}"/>
+                            <label id="r">Roll No:</label><input type="text"color="black" name="roll" placeholder="ddccddd" required pattern="[0-9]{2}"/><br></li>
+                        <li><label>Name</label><br>
+                            <label id="r">First:</label> <input type="text" name="firstname" required/>
+                            <label>Middle:</label> <input type="text" name="middlename" />
+                            <label>Last: </label><input type="text" name="lastname" /><br>
+                        </li>
+                        <li><label>DOB:</label> <input type="date" name="dob" />
+                            <label >Gender:</label> <select name="gender" >
+                                <option id="r" >Male</option>
+                                <option>Female</option>
+                            </select><br>
+                        </li>
+                        <li><label>Contact Information</label><br>
+                            <label>Email:</label><br>
+                            <label>Primary:</label><input type="email" name="pemail" required/>
+                            <label>Secondary:</label><input type="email" name="semail" />
+                            <br>
+                            <label>Phone:</label><br><label>Primary:</label><input type="tel" name="pphone" required/>
+                            <label>Secondary:</label><input type="tel" name="sphone" /><br>
+                        </li>
+                        <li><label>Address</label><br>
+                            <label>Line 1:</label><input type="text" name="line1" required/>
+                            <label>Line 2:</label><input type="text" name="line2" /><br>
+                            <label>P.O.:</label><input type="text" name="po" />
+                            <label>City:</label><input type="text" name="city" />
+                            <label>Pin Code:</label><input type="integer" name="pin" /><br>
+                            <label>State:</label><input type="text" name="state" required/>
+                            <label>Country:</label><input type="text" name="country" required/><br>
+                        </li>
+                        <li><label>Parent's Information</label><br>
+                            <label>Father's Name</label><br>
+                            <label>First: </label><input type="text" name="firstnamef" required/>
+                            <label>Middle:</label> <input type="text" name="middlenamef" />
+                            <label>Last:</label> <input type="text" name="lastnamef" /><br>
+                            <label>Mother's Name</label><br>
+                            <label>First:</label> <input type="text" name="firstnamem" required/>
+                            <label>Middle:</label> <input type="text" name="middlenamem" />
+                            <label>Last:</label> <input type="text" name="lastnamem" /><br></li>
+                        <li><label>Department Name:</label>
+                            <br>  <input type="text" name="dname" /><br>
+                               
+                                
+                                
+                                <label>Admission Year:</label><br> <input  type="year" name="adyear" /><br>
+                                </li>
+
+                                <button class="submit" type="submit">Submit Form</button>
+                    </form>
+                </ol>
+            </body>
+        </div>
+        <div id="section2" class="container-fluid">
+            <h2>Welcome to Course Enrollment...</h2>
+             
+    <body>
+        <ol>
+<form id="subject" action="subject.php" method="post">
+	
+           <h1>Subject Information<br></h1>
+                        <span class="required_notification">* Denotes Required Field</span>
+                        <br>
+                        <li>
+                            <label id="r">Id:</label> 
+                            <input type="text" name="scode"  required/><br>
+
+                        </li>
+                        <li>
+                            <label id="r">Semester:</label> 
+                            <input type="text" name="sname" required/><br>
+                        </li>
+                        <table border="2">
+                            <br>
+
+                            <tr>
+                                <th>Sl No</th>
+                                <th>Subject Code</th>
+                                <th>Subject Name</th>
+                                <th>Credits</th>
+                            </tr>
+                            <tr>
+                                <td>1.</td>
+                                <td><input type="text" name="1code" size="10" required /></td>
+                                <td><input type="text" name="1name" size="20"required /></td>
+                                <td><input type="text" name="1c" size="3" required/></td>
+                            </tr>
+                            <tr>
+                                <td>2.</td>
+                                <td><input type="text" name="2code" size="10" required /></td>
+                                <td><input type="text" name="2name" size="20" required/></td>
+                                <td><input type="text" name="2c" size="3" required/></td>
+                            </tr>
+                            <tr>
+                                <td>3.</td>
+                                <td><input type="text" name="3code" size="10" required/></td>
+                                <td><input type="text" name="3name" size="20" required/></td>
+                                <td><input type="text" name="3c" size="3" required/></td>
+                            </tr>
+                            <tr>
+                                <td>4.</td>
+                                <td><input type="text" name="4code" size="10" required/></td>
+                                <td><input type="text" name="4name" size="20" required/></td>
+                                <td><input type="text" name="4c" size="3" required/></td>
+                            </tr>
+                            <tr>
+                                <td>5.</td>
+                                <td><input type="text" name="5code" size="10" required/></td>
+                                <td><input type="text" name="5name" size="20" required/></td>
+                                <td><input type="text" name="5c" size="3" required/></td>
+                            </tr>
+                            <tr>
+                                <td>6.</td>
+                                <td><input type="text" name="6code" size="10" /></td>
+                                <td><input type="text" name="6name" size="20" /></td>
+                                <td><input type="text" name="6c" size="3" /></td>
+                            </tr>
+                        </table>
+                        <p />
+
+
+                        <li>
+                            <p>
+                                Total credits : 
+                                <input typr="text" name="credit" size="5" required/>
+                            </p>
+
+                        </li>	
+                        <li>
+                            <h3>Group1 Elective</h3>
+                            <p>
+                                1. Data Mining <br />
+                                2. Java
+                            </p>
+                        </li>
+                        <li>
+
+                            <h3>Group2 Elective</h3>
+                            <p>
+                                1. Cryptography <br />
+                                2. Natural Language Processing
+                            </p><br>
+                        </li>
+
+                        <button class="submit" type="submit">Submit Form</button>
+                    </form>
+                </ol>
+
+            </body>
+        </div>
+        <div id="section3" class="container-fluid">
+             <h1>Search...<br></h1>
+            <form id="myForm" action="fetch.php" method="post">
+			 <h1>Search a student record<br></h1>
+                 <br>
+                  
+              <p> <label>Enter student ID to Search:</label> <input type="text" name="id" required/><br></p>
+                 
+                   
+                
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+                <button class="submit" type="submit">Submit Form</button>
+            </form>
+           
+            
+             </div>
+        <div id="section41" class="container-fluid">
+           
+			  
+            <form id="myForm" action="stdel.php" method="post">
+			<h1>Student Record (Update/Delete)</h1>
+                <br>
+			<h3> Delete and Backup</h3>
+
+                <p> <label  >Enter student ID to Delete:  </label> <input type="text" name="stdel" required/><br>
+                </p>
+
+
+                <button class="submit" type="submit">Submit Form</button>
+            </form>
+			<form id="myForm" action="smodify.php" method="post">
+			<h2> Update</h2>
+
+                 <p> <label  >Enter student ID to Update:  </label> <input type="text" name="sid" required/><br>
+                </p>
+
+
+                <button class="submit" type="submit">Submit Form</button>
+            </form>
+             </div>
+       
+
+    </body>
+</html>
+
