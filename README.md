@@ -1,4 +1,4 @@
-# Database-Frontend-backend-Mysql-Project
+# Database-Frontend-backend-Project
 
 Visit :http://raj-maurya.github.io/Database-Frontend-backend-Mysql-Project
 
