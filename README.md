@@ -11,6 +11,6 @@ Visit :http://raj-maurya.github.io/Database-Frontend-backend-Mysql-Project
 5. Just put the username and password to log in and fill students details.
 
 # Some GUI insight:
-https://github.com/raj-maurya/Database-Frontend-backend-Mysql-Project/blob/master/screen_shots/front1.PNG
+https://github.com/raj-maurya/Database-Frontend-backend-Mysql-Project/blob/master/screen_shots/front1.PNG?raw=true
 
 https://github.com/raj-maurya/Database-Frontend-backend-Mysql-Project/blob/master/screen_shots/front2.PNG?raw=true
