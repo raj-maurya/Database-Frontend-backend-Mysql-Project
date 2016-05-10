@@ -14,3 +14,7 @@ Visit :http://raj-maurya.github.io/Database-Frontend-backend-Mysql-Project
 https://github.com/raj-maurya/Database-Frontend-backend-Mysql-Project/blob/master/screen_shots/front1.PNG?raw=true
 
 https://github.com/raj-maurya/Database-Frontend-backend-Mysql-Project/blob/master/screen_shots/front2.PNG?raw=true
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/raj-maurya/database-frontend-backend-mysql-project/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
