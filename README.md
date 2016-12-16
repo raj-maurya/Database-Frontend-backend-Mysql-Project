@@ -19,4 +19,6 @@ Make an Issue!
 # Some GUI insights of the project:
 ![alt tag](https://github.com/raj-maurya/Database-Frontend-backend-Mysql-Project/blob/master/screen_shots/front1.PNG?)
 
+![alt tag](https://github.com/raj-maurya/Database-Frontend-backend-Mysql-Project/blob/master/screen_shots/front2.PNG)
+
 
