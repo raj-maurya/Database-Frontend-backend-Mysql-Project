@@ -11,7 +11,7 @@ Visit :http://raj-maurya.github.io/Database-Frontend-backend-Mysql-Project
 5. Just put the username and password to log in and fill students details.
 
 ###For Help!
-Ping me at Rajkmaurya111@gmail.com
+Ping me at rajkmaurya111@gmail.com
 Or
 Make an Issue!
 
